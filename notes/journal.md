@@ -54,3 +54,6 @@ python --version
 ```
 pip install -r requirements.txt
 ```
+
+- download ifc sample test files
+- 
