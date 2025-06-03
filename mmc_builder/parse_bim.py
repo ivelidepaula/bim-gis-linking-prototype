@@ -1,8 +1,10 @@
+# parse_bim.py
+
 import ifcopenshell
 import os
 
 # location
-file_path = os.path.join("..", "input", "ifc", "Ifc4_SampleHouse.ifc")
+file_path = os.path.join("..", "input", "bim", "Ifc4_SampleHouse.ifc")
 
 # Open IFC file
 model = ifcopenshell.open(file_path)
