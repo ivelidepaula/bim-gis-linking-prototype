@@ -1,15 +1,23 @@
 import geopandas as gpd
-import os
+from mmc_builder.config import GIS_INPUT
 
-# File path
-file_path = os.path.join("..", "input", "gis", "landuse_residential_berlin.geojson")
+def get_geojson_crs(geojson_path=None):
+    """
+    Given a path to a GeoJSON file, return its CRS string (example: "EPSG:25833") or None if unspecified.
+    Defaults to GIS_INPUT if no path is provided.
+    """
+    path = geojson_path or GIS_INPUT
+    gdf = gpd.read_file(path)
+    return gdf.crs.to_string() if gdf.crs else None
 
-# Load geodataframe
-gdf = gpd.read_file(file_path)
-
-# Print CRS info
-print("CRS:", gdf.crs)
-
-# Print basic geometry info
-print("\nTotal features:", len(gdf))
-print("Geometry type:", gdf.geom_type.unique())
+def get_geojson_feature_info(geojson_path=None):
+    """
+    Given a path to a GeoJSON file, return a tuple:
+      (feature_count, list_of_unique_geometry_types).
+    Defaults to GIS_INPUT if no path is provided.
+    """
+    path = geojson_path or GIS_INPUT
+    gdf = gpd.read_file(path)
+    feature_count = len(gdf)
+    geom_types = gdf.geom_type.unique().tolist()
+    return feature_count, geom_types
