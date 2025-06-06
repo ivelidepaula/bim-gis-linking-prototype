@@ -56,4 +56,19 @@ pip install -r requirements.txt
 ```
 
 - download ifc sample test files
-- 
+
+# Day 3
+- reread both papers
+
+Add some sample IFC files from:
+https://github.com/youshengCode/IfcSampleFiles/tree/main
+
+# Day 4
+- read IfcOpenShell Documentation https://docs.ifcopenshell.org/index.html
+- read DIN 18290-1
+- create ifc parser
+- read https://www.buildingsmart.org/wp-content/uploads/2020/02/User-Guide-for-Geo-referencing-in-IFC-v2.0.pdf
+- install QuickOSM to create query to overpass turbo (https://overpass-turbo.eu/)
+- Notes to myself: explain later about 
+  - What RefLatitude and RefLongitude Are
+  - What IfcMapConversion Does
