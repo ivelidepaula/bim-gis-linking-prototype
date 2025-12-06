@@ -1,5 +1,5 @@
 import geopandas as gpd
-from mmc_builder.config import GIS_INPUT
+from config import GIS_INPUT
 
 def get_geojson_crs(geojson_path=None):
     """

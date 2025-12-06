@@ -2,10 +2,10 @@ import os
 import shutil
 import zipfile
 
-from mmc_builder.config import BIM_INPUT, GIS_INPUT, OUTPUT_DIR, MMC_ARCHIVE
-from mmc_builder.parse_bim import get_ifc_schema_version, get_ifc_outerpose
-from mmc_builder.parse_gis import get_geojson_crs
-from mmc_builder.xml_builder import (
+from config import BIM_INPUT, GIS_INPUT, OUTPUT_DIR, MMC_ARCHIVE
+from parse_bim import get_ifc_schema_version, get_ifc_outerpose
+from parse_gis import get_geojson_crs
+from xml_builder import (
     build_multimodel_element, write_multimodel_xml,
     build_linkmodel_element, write_linkmodel_xml
 )

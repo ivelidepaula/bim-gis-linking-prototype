@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from mmc_builder.config import MMC_FORMAT_VERSION, MM_DOMAIN
+from config import MMC_FORMAT_VERSION, MM_DOMAIN
 
 def build_multimodel_element(bim_info, gis_info):
     """

@@ -1,5 +1,5 @@
 import ifcopenshell
-from mmc_builder.config import BIM_INPUT
+from config import BIM_INPUT
 import math
 
 def get_ifc_schema_version(ifc_path=None):
